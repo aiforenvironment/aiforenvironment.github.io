@@ -2,11 +2,23 @@ body {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: #ffffff;
 }
 
-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.read-more-target,
+.read-more-trigger_opened {
+  display: none;
+}
+.read-more-state:checked ~ .read-more-wrap .read-more-target,
+.read-more-state:checked ~ .read-more-trigger_opened {
+  display: block;
+}
+.read-more-state:checked ~ .read-more-trigger_closed {
+  display: none;
+}
+.read-more-trigger_closed,
+.read-more-trigger_opened {
+  color: #374151;
+  font-size: 14px;
+  text-decoration: underline;
 }
